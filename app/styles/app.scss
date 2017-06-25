@@ -9,3 +9,8 @@ $c-red: #f00;
 @import 'footer';
 @import 'nav';
 @import 'content';
+
+
+.red {
+  color: $c-red;
+}
