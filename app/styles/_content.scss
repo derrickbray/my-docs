@@ -1,8 +1,8 @@
 .section {
   margin-top: 5rem;
+  color: $c-red;
   text-align: center;
   text-decoration: underline;
-  // color: $c-primary;
 }
 
 .step {
@@ -18,7 +18,7 @@
   margin: 2rem auto;
   padding: 0.5rem;
   background: lightgrey;
-  // color: $c-primary;
+  color: $c-red;
   // text-align: center;
 }
 
@@ -28,6 +28,6 @@
   margin-top: 3rem;
 
   &__img {
-    border: 1px solid black;
+    border: 1px solid $c-red;
   }
 }
