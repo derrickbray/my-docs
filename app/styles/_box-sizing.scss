@@ -1,13 +1,32 @@
 // apply a natural box layout model to all elements, but allowing components to change
-html {
+* {
   box-sizing: border-box;
 }
 
-* {
-  box-sizing: inherit;
+html {
+  margin: 0;
+}
 
-  &:before,
-  &:after {
-    box-sizing: inherit;
-  }
+body {
+  margin: 0;
+  font-family: 'Cormorant', serif;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: white;
+}
+
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
 }
