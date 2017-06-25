@@ -1,0 +1,33 @@
+.section {
+  margin-top: 5rem;
+  text-align: center;
+  text-decoration: underline;
+  // color: $c-primary;
+}
+
+.step {
+  margin-top: 5rem;
+}
+
+.instructions {
+  margin-left: 3rem;
+}
+
+.command {
+  width: 70%;
+  margin: 2rem auto;
+  padding: 0.5rem;
+  background: lightgrey;
+  // color: $c-primary;
+  // text-align: center;
+}
+
+.pic-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+
+  &__img {
+    border: 1px solid black;
+  }
+}
