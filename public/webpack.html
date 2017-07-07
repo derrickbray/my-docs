@@ -44,7 +44,26 @@
       <div class="command">$ touch src/name.js</div>
       <div class="command">$ touch webpack.config.js</div>
       <div class="command">$ touch index.html</div>
-      <div class="instructions">Note that only the name.js and index.js are in the src folder, the others are not.</div>
+      <div class="instructions"><div class="red">Note that only the name.js and index.js are in the src folder, the others are not.</div></div>
+
+      <h3 class="step">5. Setup your HTML file.</h3>
+      <div class="instructions">Go to the index.html file.</div>
+      <div class="command">Type "html" to get your boilerplate.</div>
+      <div class="instructions">Then add a script tag to the body. <div class="red">You will need to add the opening brackets!</div></div>
+      <div class="command">script src="dist/index.js">/script></div>
+      <div class="instructions">Now when you load your html page the script will find the bundle.</div>
+
+      <h3 class="step">6. Setup your webpack.config file.</h3>
+      <div class="instructions">Go to your webpack.config.js file and add</div>
+      <div class="command">
+        var path = require('path');<br>
+        module.exports = {<br>
+        entry: './src/index.js',<br>
+        output: {<br>
+        filemane: 'bundle.js',<br>
+        path: path.resolve(__dirname, 'dist')<br>
+        }<br>
+        };</div>
 
 
     </div>
