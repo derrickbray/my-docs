@@ -28,10 +28,23 @@
       <div class="instructions">This should prompt you to answer a few questions. You should be able to just hit enter for all. If you want to fill out the discription you can or you can do it later. The one important thing is the entry file name, by default it should be index.js (that is what we will use here). That is fine but you can change that too if you want. Finally, it will show you the JSON and ask if it is okay, just hit enter.
       </div>
 
-      <h3 class="step">4. Install Webpack</h3>
+      <h3 class="step">4. Install and prepare project for Webpack</h3>
       <div class="instructions">We will install this locally, but you can do globally.</div>
       <div class="command">$ npm install --save-dev webpack</div>
-
+      <div class="instructions">Now we will need to create some folders and files.</div>
+      <div class="instructions">So inside your project folder we need a dist folder, this is where your bundled file will come out at. You don't need to do anything else here.</div>
+      <div class="command">$ mkdir dist</div>
+      <div class="instructions">Also inside your project folder you need a src folder (or source folder). This is where we will put our modules that go into our bundle.</div>
+      <div class="command">$ mkdir src</div>
+      <div class="instructions">Let's make our index.js file inside of the src folder. This will be the main entry file for our bundle.
+      </div>
+      <div class="instructions">From the terminal in your project enter</div>
+      <div class="command">$ touch src/index.js</div>
+      <div class="instructions">While here lets go ahead and make some more files: name.js webpack.config.js and index.html</div>
+      <div class="command">$ touch src/name.js</div>
+      <div class="command">$ touch webpack.config.js</div>
+      <div class="command">$ touch index.html</div>
+      <div class="instructions">Note that only the name.js and index.js are in the src folder, the others are not.</div>
 
 
     </div>
