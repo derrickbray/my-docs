@@ -81,6 +81,7 @@
           "build": "node_modules/.bin/webpack src/index.js main.js",<br>
           "start": "webpack --watch"<br>
           },</div>
+
         <h3 class="step">8. Moment of truth. Test it out.</h3>
         <div class="instructions">In your terminal type</div>
         <div class="command webpack">$ npm run build</div>
@@ -88,6 +89,17 @@
         <div class="pic-box">
           <img class="pic-box__img" src="../images/webpack_build.png" alt="">
         </div>
+
+        <h2 class="section webpack">We have a build so lets build something.</h2>
+
+        <h3 class="step">1. Open your index.html file in a browser.</h3>
+        <div class="instructions">It should be a blank screen.</div>
+
+        <h3 class="step">2. Let's add a little JS.</h3>
+        <div class="instructions">In your index.js add:</div>
+        <div class="command">alert('hello world');</div>
+        <div class="instructions">Now we will need to rebuild. But let's use the npm start command so that webpack will watch for changes and rebuild our main.js each time we save.</div>
+        <div class="command">$ npm start</div>
 
 
     </div>
