@@ -13,7 +13,7 @@
       </div>
     </div>
 
-    <h1 class="title webpack">Bundle a project using Webpack</h1>
+    <h1 class="title webpack">Bundle a project using Webpack with Windows command prompt</h1>
 
     <div class="container">
       <h2 class="step">This will show you how to bundle different modules together and have a large and complete js file to load on a script tag or wherever you deploy.  For this exercise we will make a page that uses two different JS files along with some SCSS.  We will also bundle jQuery and some other tools using npm.
@@ -32,32 +32,30 @@
       <h3 class="step">3. Now lets create a package.json file.</h3>
       <div class="instructions">In your terminal type</div>
       <div class="command webpack">$ npm init</div>
-      <div class="instructions">This should prompt you to answer a few questions. You should be able to just hit enter for all. If you want to fill out the discription you can or you can do it later. The one important thing is the entry file name, by default it should be index.js (that is what we will use here). That is fine but you can change that too if you want. Finally, it will show you the JSON and ask if it is okay, just hit enter.
+      <div class="instructions">This should prompt you to answer a few questions. You should be able to just hit enter for all. If you want to fill out the discription you can or you can do it later. The one important thing is the entry file name, by default it should be index.js but you can make it whatever you want. Finally, it will show you the JSON and ask if it is okay, just hit enter.
       </div>
 
       <h3 class="step">4. Install and prepare project for Webpack</h3>
       <div class="instructions">We will install this locally, but you can do globally.</div>
       <div class="command webpack">$ npm install --save-dev webpack</div>
       <div class="instructions">Now we will need to create some folders and files.</div>
-      <div class="instructions">So inside your project folder we need a dist folder, this is where your bundled file will come out at. You don't need to do anything else here.</div>
-      <div class="command webpack">$ mkdir dist</div>
-      <div class="instructions">Also inside your project folder you need a src folder (or source folder). This is where we will put our modules that go into our bundle.</div>
+      <div class="instructions">Inside your project folder you need a src folder (or source folder). This is where we will put our modules that go into our bundle.</div>
       <div class="command webpack">$ mkdir src</div>
       <div class="instructions">Let's make our index.js file inside of the src folder. This will be the main entry file for our bundle.
       </div>
       <div class="instructions">From the terminal in your project enter</div>
-      <div class="command webpack">$ touch src/index.js</div>
+      <div class="command webpack">$ copy nul src\index.js</div>
       <div class="instructions">While here lets go ahead and make some more files: name.js webpack.config.js and index.html</div>
-      <div class="command webpack">$ touch src/name.js</div>
-      <div class="command webpack">$ touch webpack.config.js</div>
-      <div class="command webpack">$ touch index.html</div>
+      <div class="command webpack">$ copy nul src\name.js</div>
+      <div class="command webpack">$ copy nul webpack.config.js</div>
+      <div class="command webpack">$ copy nul index.html</div>
       <div class="instructions"><div class="red">Note that only the name.js and index.js are in the src folder, the others are not.</div></div>
 
       <h3 class="step">5. Setup your HTML file.</h3>
       <div class="instructions">Go to the index.html file.</div>
       <div class="command webpack">Type "html" to get your boilerplate.</div>
-      <div class="instructions">Then add a script tag to the body. <div class="red">You will need to add the opening brackets!</div></div>
-      <div class="command webpack">script src="dist/index.js">/script></div>
+      <div class="instructions">Then add a script tag to the body. <div class="red">*You will need to add the opening brackets!*</div></div>
+      <div class="command webpack">script src="main.js">/script></div>
       <div class="instructions">Now when you load your html page the script will find the bundle.</div>
 
       <h3 class="step">6. Setup your webpack.config file.</h3>
@@ -67,10 +65,29 @@
         module.exports = {<br>
         entry: './src/index.js',<br>
         output: {<br>
-        filemane: 'bundle.js',<br>
-        path: path.resolve(__dirname, 'dist')<br>
+        filename: 'main.js',<br>
         }<br>
         };</div>
+
+        <h3 class="step">7. Let's write some npm scripts.</h3>
+        <div class="instructions">Go to your package.json so we can add a script.</div>
+        <div class="instructions">You should see this:</div>
+        <div class="command webpack">  "scripts": {<br>
+          "test": "echo \"Error: no test specified\" && exit 1"<br>
+          },</div>
+        <div class="instructions">Change it to look like this:</div>
+        <div class="command webpack">  "scripts": {<br>
+          "test": "echo \"Error: no test specified\" && exit 1",<br>
+          "build": "node_modules/.bin/webpack src/index.js main.js",<br>
+          "start": "webpack --watch"<br>
+          },</div>
+        <h3 class="step">8. Moment of truth. Test it out.</h3>
+        <div class="instructions">In your terminal type</div>
+        <div class="command webpack">$ npm run build</div>
+        <div class="instructions">If it built correctly you should see something like this in the terminal.</div>
+        <div class="pic-box">
+          <img class="pic-box__img" src="../images/webpack_build.png" alt="">
+        </div>
 
 
     </div>
