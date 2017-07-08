@@ -18,8 +18,11 @@ ul {
 }
 
 a {
-  color: green;
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .container {
