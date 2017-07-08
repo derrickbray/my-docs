@@ -97,21 +97,23 @@
 
         <h3 class="step">2. Let's add a little JS.</h3>
         <div class="instructions">In your index.js add:</div>
-        <div class="command webpack">alert('hello world');</div>
+        <div class="command webpack">console.log('hello world');</div>
         <div class="instructions">Now we will need to rebuild. But let's use the npm start command so that webpack will watch for changes and rebuild our main.js each time we save.</div>
         <div class="command webpack">$ npm start</div>
-        <div class="instructions">Go to your index.html in the browser and refresh. You should see the alert.</div>
+        <div class="instructions">Go to your index.html in the browser and refresh. You should see the statement hello world in the console.</div>
 
         <h3 class="step">3. Let's link the two JS files together.</h3>
         <div class="instructions">Open the name.js file and type:</div>
         <div class="command webpack">exports.name = "Derrick";</div>
         <div class="instructions">Now the name is being exported.</div>
-        <div class="instructions">Then in the index.js file type this before the alert:</div>
+        <div class="instructions">Then in the index.js file type this before the console.log:</div>
         <div class="command webpack">var name = require('./name');</div>
         <div class="instructions">Here we are pulling in the exported variable.</div>
-        <div class="instructions">Now we need to change our alert statment. We set the import to be name and we need the name variable inside of that. So we will use name.name for our variable.</div>
-        <div class="command webpack">alert("Hello, my name is " + name.name);</div>
+        <div class="instructions">Now we need to change our console.log statment. We set the import to be name and we need the name variable inside of that. So we will use name.name for our variable.</div>
+        <div class="command webpack">console.log("Hello, my name is " + name.name);</div>
         <div class="instructions">Now you have used a variable from name.js in index.js.</div>
+
+        <h3 class="step">4. Let's install and use jQuery.</h3>
 
 
 
