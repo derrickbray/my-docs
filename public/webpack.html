@@ -1,122 +1,129 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Webpack</title>
-    <link rel="stylesheet" href="/app.css">
-  </head>
-  <body>
 
-    <div class="nav">
-      <div class="nav__pic">
-        <img class="nav__pic-img " src="../images/webpack.jpeg" alt="">
-      </div>
+<head>
+  <meta charset="utf-8">
+  <title>Webpack</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+
+<body>
+
+  <div class="nav">
+    <div class="nav__pic">
+      <img class="nav__pic-img " src="../images/webpack.jpeg" alt="">
     </div>
+  </div>
 
-    <h1 class="title webpack">Bundle a project using Webpack with Windows command prompt</h1>
+    <div class="link-bar">
+      <div class="container">
+      <a href="/webpack.html">Webpack</a>
+      <a href="/ruby-crud.html">Ruby</a>
+    </div>
+  </div>
 
-    <div class="container">
-      <h2 class="step">This will show you how to bundle different modules together and have a large and complete js file to load on a script tag or wherever you deploy.  For this exercise we will make a page that uses two different JS files along with some SCSS.  We will also bundle jQuery and some other tools using npm.
+  <h1 class="title webpack">Bundle a project using Webpack with Windows command prompt</h1>
+
+  <div class="container">
+    <h2 class="step">This will show you how to bundle different modules together and have a large and complete js file to load on a script tag or wherever you deploy.  For this exercise we will make a page that uses two different JS files along with some SCSS.  We will also bundle jQuery and some other tools using npm.
       </h2>
 
-      <h3 class="step">1. Make sure you're ready</h3>
-      <div class="instructions">Check and see if you have a current version of node. If you do you should also have npm installed.
-      </div>
-
-      <h3 class="step">2. Lets start a new project.</h3>
-      <div class="instructions">In your terminal type</div>
-      <div class="command webpack">$ mkdir webpack-demo</div>
-      <div class="instructions">Make sure you get into your new folder.</div>
-      <div class="command webpack">$ cd webpack-demo</div>
-
-      <h3 class="step">3. Now lets create a package.json file.</h3>
-      <div class="instructions">In your terminal type</div>
-      <div class="command webpack">$ npm init</div>
-      <div class="instructions">This should prompt you to answer a few questions. You should be able to just hit enter for all. If you want to fill out the discription you can or you can do it later. The one important thing is the entry file name, by default it should be index.js but you can make it whatever you want. Finally, it will show you the JSON and ask if it is okay, just hit enter.
-      </div>
-
-      <h3 class="step">4. Install and prepare project for Webpack</h3>
-      <div class="instructions">We will install this locally, but you can do globally.</div>
-      <div class="command webpack">$ npm install --save-dev webpack</div>
-      <div class="instructions">Now we will need to create some folders and files.</div>
-      <div class="instructions">Inside your project folder you need a src folder (or source folder). This is where we will put our modules that go into our bundle.</div>
-      <div class="command webpack">$ mkdir src</div>
-      <div class="instructions">Let's make our index.js file inside of the src folder. This will be the main entry file for our bundle.
-      </div>
-      <div class="instructions">From the terminal in your project enter</div>
-      <div class="command webpack">$ copy nul src\index.js</div>
-      <div class="instructions">While here lets go ahead and make some more files: name.js webpack.config.js and index.html</div>
-      <div class="command webpack">$ copy nul src\name.js</div>
-      <div class="command webpack">$ copy nul webpack.config.js</div>
-      <div class="command webpack">$ copy nul index.html</div>
-      <div class="instructions"><div class="red">Note that only the name.js and index.js are in the src folder, the others are not.</div></div>
-
-      <h3 class="step">5. Setup your HTML file.</h3>
-      <div class="instructions">Go to the index.html file.</div>
-      <div class="command webpack">Type "html" to get your boilerplate.</div>
-      <div class="instructions">Then add a script tag to the body. <div class="red">*You will need to add the opening brackets!*</div></div>
-      <div class="command webpack">script src="main.js">/script></div>
-      <div class="instructions">Now when you load your html page the script will find the bundle.</div>
-
-      <h3 class="step">6. Setup your webpack.config file.</h3>
-      <div class="instructions">Go to your webpack.config.js file and add</div>
-      <div class="command webpack">
-        var path = require('path');<br>
-        module.exports = {<br>
-        entry: './src/index.js',<br>
-        output: {<br>
-        filename: 'main.js',<br>
-        }<br>
-        };</div>
-
-        <h3 class="step">7. Let's write some npm scripts.</h3>
-        <div class="instructions">Go to your package.json so we can add a script.</div>
-        <div class="instructions">You should see this:</div>
-        <div class="command webpack">  "scripts": {<br>
-          "test": "echo \"Error: no test specified\" && exit 1"<br>
-          },</div>
-        <div class="instructions">Change it to look like this:</div>
-        <div class="command webpack">  "scripts": {<br>
-          "test": "echo \"Error: no test specified\" && exit 1",<br>
-          "build": "node_modules/.bin/webpack src/index.js main.js",<br>
-          "start": "webpack --watch"<br>
-          },</div>
-
-        <h3 class="step">8. Moment of truth. Test it out.</h3>
-        <div class="instructions">In your terminal type</div>
-        <div class="command webpack">$ npm run build</div>
-        <div class="instructions">If it built correctly you should see something like this in the terminal.</div>
-        <div class="pic-box">
-          <img class="pic-box__img" src="../images/webpack_build.png" alt="">
-        </div>
-
-        <h2 class="section webpack">We have a build so lets build something.</h2>
-
-        <h3 class="step">1. Open your index.html file in a browser.</h3>
-        <div class="instructions">It should be a blank screen.</div>
-
-        <h3 class="step">2. Let's add a little JS.</h3>
-        <div class="instructions">In your index.js add:</div>
-        <div class="command webpack">console.log('hello world');</div>
-        <div class="instructions">Now we will need to rebuild. But let's use the npm start command so that webpack will watch for changes and rebuild our main.js each time we save.</div>
-        <div class="command webpack">$ npm start</div>
-        <div class="instructions">Go to your index.html in the browser and refresh. You should see the statement hello world in the console.</div>
-
-        <h3 class="step">3. Let's link the two JS files together.</h3>
-        <div class="instructions">Open the name.js file and type:</div>
-        <div class="command webpack">exports.name = "Derrick";</div>
-        <div class="instructions">Now the name is being exported.</div>
-        <div class="instructions">Then in the index.js file type this before the console.log:</div>
-        <div class="command webpack">var name = require('./name');</div>
-        <div class="instructions">Here we are pulling in the exported variable.</div>
-        <div class="instructions">Now we need to change our console.log statment. We set the import to be name and we need the name variable inside of that. So we will use name.name for our variable.</div>
-        <div class="command webpack">console.log("Hello, my name is " + name.name);</div>
-        <div class="instructions">Now you have used a variable from name.js in index.js.</div>
-
-        <h3 class="step">4. Let's install and use jQuery.</h3>
-
-
-
+    <h3 class="step">1. Make sure you're ready</h3>
+    <div class="instructions">Check and see if you have a current version of node. If you do you should also have npm installed.
     </div>
-  </body>
+
+    <h3 class="step">2. Lets start a new project.</h3>
+    <div class="instructions">In your terminal type</div>
+    <div class="command webpack">$ mkdir webpack-demo</div>
+    <div class="instructions">Make sure you get into your new folder.</div>
+    <div class="command webpack">$ cd webpack-demo</div>
+
+    <h3 class="step">3. Now lets create a package.json file.</h3>
+    <div class="instructions">In your terminal type</div>
+    <div class="command webpack">$ npm init</div>
+    <div class="instructions">This should prompt you to answer a few questions. You should be able to just hit enter for all. If you want to fill out the discription you can or you can do it later. The one important thing is the entry file name, by default it should be index.js
+      but you can make it whatever you want. Finally, it will show you the JSON and ask if it is okay, just hit enter.
+    </div>
+
+    <h3 class="step">4. Install and prepare project for Webpack</h3>
+    <div class="instructions">We will install this locally, but you can do globally.</div>
+    <div class="command webpack">$ npm install --save-dev webpack</div>
+    <div class="instructions">Now we will need to create some folders and files.</div>
+    <div class="instructions">Inside your project folder you need a src folder (or source folder). This is where we will put our modules that go into our bundle.</div>
+    <div class="command webpack">$ mkdir src</div>
+    <div class="instructions">Let's make our index.js file inside of the src folder. This will be the main entry file for our bundle.
+    </div>
+    <div class="instructions">From the terminal in your project enter</div>
+    <div class="command webpack">$ copy nul src\index.js</div>
+    <div class="instructions">While here lets go ahead and make some more files: name.js webpack.config.js and index.html</div>
+    <div class="command webpack">$ copy nul src\name.js</div>
+    <div class="command webpack">$ copy nul webpack.config.js</div>
+    <div class="command webpack">$ copy nul index.html</div>
+    <div class="instructions">
+      <div class="red">Note that only the name.js and index.js are in the src folder, the others are not.</div>
+    </div>
+
+    <h3 class="step">5. Setup your HTML file.</h3>
+    <div class="instructions">Go to the index.html file.</div>
+    <div class="command webpack">Type "html" to get your boilerplate.</div>
+    <div class="instructions">Then add a script tag to the body.
+      <div class="red">*You will need to add the opening brackets!*</div>
+    </div>
+    <div class="command webpack">script src="main.js">/script></div>
+    <div class="instructions">Now when you load your html page the script will find the bundle.</div>
+
+    <h3 class="step">6. Setup your webpack.config file.</h3>
+    <div class="instructions">Go to your webpack.config.js file and add</div>
+    <div class="command webpack">
+      var path = require('path');<br> module.exports = {<br> entry: './src/index.js',<br> output: {<br> filename: 'main.js',<br> }
+      <br> };
+    </div>
+
+    <h3 class="step">7. Let's write some npm scripts.</h3>
+    <div class="instructions">Go to your package.json so we can add a script.</div>
+    <div class="instructions">You should see this:</div>
+    <div class="command webpack"> "scripts": {<br> "test": "echo \"Error: no test specified\" && exit 1"<br> },
+    </div>
+    <div class="instructions">Change it to look like this:</div>
+    <div class="command webpack"> "scripts": {<br> "test": "echo \"Error: no test specified\" && exit 1",<br> "build": "node_modules/.bin/webpack src/index.js main.js",<br> "start": "webpack --watch"<br> },
+    </div>
+
+    <h3 class="step">8. Moment of truth. Test it out.</h3>
+    <div class="instructions">In your terminal type</div>
+    <div class="command webpack">$ npm run build</div>
+    <div class="instructions">If it built correctly you should see something like this in the terminal.</div>
+    <div class="pic-box">
+      <img class="pic-box__img" src="../images/webpack_build.png" alt="">
+    </div>
+
+    <h2 class="section webpack">We have a build so lets build something.</h2>
+
+    <h3 class="step">1. Open your index.html file in a browser.</h3>
+    <div class="instructions">It should be a blank screen.</div>
+
+    <h3 class="step">2. Let's add a little JS.</h3>
+    <div class="instructions">In your index.js add:</div>
+    <div class="command webpack">console.log('hello world');</div>
+    <div class="instructions">Now we will need to rebuild. But let's use the npm start command so that webpack will watch for changes and rebuild our main.js each time we save.</div>
+    <div class="command webpack">$ npm start</div>
+    <div class="instructions">Go to your index.html in the browser and refresh. You should see the statement hello world in the console.</div>
+
+    <h3 class="step">3. Let's link the two JS files together.</h3>
+    <div class="instructions">Open the name.js file and type:</div>
+    <div class="command webpack">exports.name = "Derrick";</div>
+    <div class="instructions">Now the name is being exported.</div>
+    <div class="instructions">Then in the index.js file type this before the console.log:</div>
+    <div class="command webpack">var name = require('./name');</div>
+    <div class="instructions">Here we are pulling in the exported variable.</div>
+    <div class="instructions">Now we need to change our console.log statment. We set the import to be name and we need the name variable inside of that. So we will use name.name for our variable.</div>
+    <div class="command webpack">console.log("Hello, my name is " + name.name);</div>
+    <div class="instructions">Now you have used a variable from name.js in index.js.</div>
+
+    <h3 class="step">4. Let's install and use jQuery.</h3>
+
+
+
+  </div>
+</body>
+
 </html>
