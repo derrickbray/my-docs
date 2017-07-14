@@ -120,38 +120,27 @@
     <div class="instructions">Now you have used a variable from name.js in index.js.</div>
     <!--<h3 class="step">4. Let's install and use jQuery.</h3>-->
 
-  <h2 class="section webpack">Time to add some style.</h2>
-  <h3 class="step">1. First we need to add some style loaders.</h3>
-  <div class="instructions">Webpack bundles everything into a js file so we need to add a loader to our project to use css.</div>
-  <div class="instructions red">Make a new css file in the scr folder named style.css</div>
-  <div class="instructions">Now we need to get our loaders with npm.</div>
-  <div class="command webpack">$ npm install style-loader --save-dev</div>
-  <div class="instructions">Then</div>
-  <div class="command webpack">$ npm install --save-dev css-loader</div>
-  <div class="instructions">In the webpack.config.js file make it look like this:</div>
-  <div class="command webpack">*not right* var path = require('path');<br>
-module.exports = {<br>
-  entry: './src/index.js',<br>
-  output: {<br>
-    filename: 'main.js'<br>
-  }<br>
-  module: {<br>
-    rules: [<br>
-      {<br>
-        test: /\.css$/,<br>
-        use: ['style-loader', 'css-loader']<br>
-      }<br>
-    ]<br>
-  }<br>
-}<br>
-};<br>
+    <h2 class="section webpack">Time to add some style.</h2>
+    <h3 class="step">1. First we need to add some style loaders.</h3>
+    <div class="instructions">Webpack bundles everything into a js file so we need to add a loader to our project to use css.</div>
+    <div class="instructions red">Make a new css file in the scr folder named style.css</div>
+    <div class="instructions">Now we need to get our loaders with npm.</div>
+    <div class="command webpack">$ npm install style-loader --save-dev</div>
+    <div class="instructions">Then</div>
+    <div class="command webpack">$ npm install --save-dev css-loader</div>
+    <div class="instructions">In the webpack.config.js file make it look like this:</div>
+    <div class="command webpack">var path = require('path');<br> module.exports = {<br> entry: './src/index.js',<br> output: {<br> filename: 'main.js'<br> },
+      <br> module: {<br> rules: [<br> {
+      <br> test: /\.css$/,<br> use: ['style-loader', 'css-loader']<br> }
+      <br> ]
+      <br> }
+      <br> }
+      <br></div>
+    <h3 class="step">2. Now we need to import the styles into our <div class="red">index.js</div></h3>
+    <div class="instructions">Put this at the top of your index.js file</div>
+    <div class="command">import style from './style.css';</div>
 
-</div>
-
-
-
-
-</div>
+  </div>
 
   <div class="footer">
     <div class="link-box">
