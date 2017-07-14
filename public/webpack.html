@@ -38,7 +38,7 @@
     <div class="instructions">Make sure you get into your new folder.</div>
     <div class="command webpack">$ cd webpack-demo</div>
 
-    <h3 class="step">3. Now lets create a package.json file.</h3>
+    <h3 class="step">3. Now lets create a <strong>package.json</strong> file.</h3>
     <div class="instructions">In your terminal type</div>
     <div class="command webpack">$ npm init</div>
     <div class="instructions">This should prompt you to answer a few questions. You should be able to just hit enter for all. If you want to fill out the discription you can or you can do it later. The one important thing is the entry file name, by default it should be index.js
@@ -51,20 +51,20 @@
     <div class="instructions">Now we will need to create some folders and files.</div>
     <div class="instructions">Inside your project folder you need a src folder (or source folder). This is where we will put our modules that go into our bundle.</div>
     <div class="command webpack">$ mkdir src</div>
-    <div class="instructions">Let's make our index.js file inside of the src folder. This will be the main entry file for our bundle.
+    <div class="instructions">Let's make our <strong>index.js</strong> file inside of the src folder. This will be the main entry file for our bundle.
     </div>
     <div class="instructions">From the terminal in your project enter</div>
     <div class="command webpack">$ copy nul src\index.js</div>
-    <div class="instructions">While here lets go ahead and make some more files: name.js webpack.config.js and index.html</div>
+    <div class="instructions">While here lets go ahead and make some more files: <strong>name.js webpack.config.js</strong> and <strong>index.html</strong></div>
     <div class="command webpack">$ copy nul src\name.js</div>
     <div class="command webpack">$ copy nul webpack.config.js</div>
     <div class="command webpack">$ copy nul index.html</div>
     <div class="instructions">
-      <div class="red">Note that only the name.js and index.js are in the src folder, the others are not.</div>
+      <div class="red">Note that only the <strong>name.js</strong> and <strong>index.js</strong> are in the src folder, the others are not.</div>
     </div>
 
     <h3 class="step">5. Setup your HTML file.</h3>
-    <div class="instructions">Go to the index.html file.</div>
+    <div class="instructions">Go to the <strong>index.html</strong> file.</div>
     <div class="command webpack">Type "html" to get your boilerplate.</div>
     <div class="instructions">Then add a script tag to the body.
       <div class="red">*You will need to add the opening brackets!*</div>
@@ -73,14 +73,14 @@
     <div class="instructions">Now when you load your html page the script will find the bundle.</div>
 
     <h3 class="step">6. Setup your webpack.config file.</h3>
-    <div class="instructions">Go to your webpack.config.js file and add</div>
+    <div class="instructions">Go to your <strong>webpack.config.js</strong> file and add</div>
     <div class="command webpack">
       var path = require('path');<br> module.exports = {<br> entry: './src/index.js',<br> output: {<br> filename: 'main.js',<br> }
       <br> };
     </div>
 
     <h3 class="step">7. Let's write some npm scripts.</h3>
-    <div class="instructions">Go to your package.json so we can add a script.</div>
+    <div class="instructions">Go to your <strong>package.json</strong> so we can add a script.</div>
     <div class="instructions">You should see this:</div>
     <div class="command webpack"> "scripts": {<br> "test": "echo \"Error: no test specified\" && exit 1"<br> },
     </div>
@@ -98,37 +98,41 @@
 
     <h2 class="section webpack">We have a build so lets build something.</h2>
 
-    <h3 class="step">1. Open your index.html file in a browser.</h3>
+    <h3 class="step">1. Open your <strong>index.html</strong> file in a browser.</h3>
     <div class="instructions">It should be a blank screen.</div>
 
     <h3 class="step">2. Let's add a little JS.</h3>
-    <div class="instructions">In your index.js add:</div>
+    <div class="instructions">In your <strong>index.js</strong> add:</div>
     <div class="command webpack">console.log('hello world');</div>
     <div class="instructions">Now we will need to rebuild. But let's use the npm start command so that webpack will watch for changes and rebuild our main.js each time we save.</div>
     <div class="command webpack">$ npm start</div>
-    <div class="instructions">Go to your index.html in the browser and refresh. You should see the statement hello world in the console.</div>
+    <div class="instructions">Go to your <strong>index.html</strong> in the browser and refresh. You should see the statement hello world in the console.</div>
 
     <h3 class="step">3. Let's link the two JS files together.</h3>
     <div class="instructions">Open the name.js file and type:</div>
     <div class="command webpack">exports.name = "Derrick";</div>
     <div class="instructions">Now the name is being exported.</div>
-    <div class="instructions">Then in the index.js file type this before the console.log:</div>
+    <div class="instructions">Then in the <strong>index.js</strong> file type this before the console.log:</div>
     <div class="command webpack">var name = require('./name');</div>
     <div class="instructions">Here we are pulling in the exported variable.</div>
     <div class="instructions">Now we need to change our console.log statment. We set the import to be name and we need the name variable inside of that. So we will use name.name for our variable.</div>
     <div class="command webpack">console.log("Hello, my name is " + name.name);</div>
-    <div class="instructions">Now you have used a variable from name.js in index.js.</div>
+    <div class="instructions">Now you have used a variable from name.js in <strong>index.js</strong>.</div>
     <!--<h3 class="step">4. Let's install and use jQuery.</h3>-->
 
     <h2 class="section webpack">Time to add some style.</h2>
-    <h3 class="step">1. First we need to add some style loaders.</h3>
+    <h3 class="step">1. First we need to add some <a href="https://webpack.js.org/loaders/" class="webpack">style loaders</a>.</h3>
     <div class="instructions">Webpack bundles everything into a js file so we need to add a loader to our project to use css.</div>
-    <div class="instructions red">Make a new css file in the scr folder named style.css</div>
-    <div class="instructions">Now we need to get our loaders with npm.</div>
+    <div class="instructions red">Make a new css file in the scr folder named <strong>style.css</strong></div>
+    <div class="instructions">Within that file go ahead and make a body style to see if it works.</div>
+    <div class="command webpack">body {<br>
+      background: blue;<br>
+      }</div>
+    <div class="instructions">Get <a href="https://www.npmjs.com/package/style-loader" class="webpack">style-loader</a></div>
     <div class="command webpack">$ npm install style-loader --save-dev</div>
-    <div class="instructions">Then</div>
+    <div class="instructions">Then get <a href="https://www.npmjs.com/package/css-loader" class="webpack">css-loader</a></div>
     <div class="command webpack">$ npm install --save-dev css-loader</div>
-    <div class="instructions">In the webpack.config.js file make it look like this:</div>
+    <div class="instructions">In the <strong>webpack.config.js</strong> file make it look like this:</div>
     <div class="command webpack">var path = require('path');<br> module.exports = {<br> entry: './src/index.js',<br> output: {<br> filename: 'main.js'<br> },
       <br> module: {<br> rules: [<br> {
       <br> test: /\.css$/,<br> use: ['style-loader', 'css-loader']<br> }
@@ -136,9 +140,14 @@
       <br> }
       <br> }
       <br></div>
-    <h3 class="step">2. Now we need to import the styles into our <div class="red">index.js</div></h3>
-    <div class="instructions">Put this at the top of your index.js file</div>
-    <div class="command">import style from './style.css';</div>
+    <h3 class="step">2. Now we need to import the styles into our index.js</h3>
+    <div class="instructions">Put this at the top of your <strong>index.js</strong> file</div>
+    <div class="command webpack">import style from './style.css';</div>
+
+    <h3 class="step">3. Check your build</h3>
+    <div class="command webpack">$ npm start</div>
+    <div class="instructions">or</div>
+    <div class="command webpack">$ npm run build</div>
 
   </div>
 
@@ -146,27 +155,18 @@
     <div class="link-box">
       <a href="https://webpack.js.org/" class="link-box__link webpack">Webpack Documentation</a>
       <a href="https://webpack.js.org/concepts/" class="link-box__link webpack">Webpack Concepts</a>
-      <a href="" class="link-box__link webpack"></a>
-      <a href="" class="link-box__link webpack"></a>
     </div>
 
     <div class="link-box">
       <a href="https://www.youtube.com/watch?v=aYo7YymudpE&list=PLpPnRKq7eNW2_dy8Re4lyByThMtTAhw5Q" class="link-box__link webpack">YouTube series</a>
       <a href="https://www.youtube.com/watch?v=eWmkBNBTbMM" class="link-box__link webpack">Long YouTube Video</a>
-      <a href="" class="link-box__link webpack"></a>
-      <a href="" class="link-box__link webpack"></a>
     </div>
 
     <div class="link-box">
       <a href="https://www.sitepoint.com/beginners-guide-to-webpack-2-and-module-bundling/" class="link-box__link webpack">Sitepoint article</a>
-      <a href="" class="link-box__link webpack"></a>
-      <a href="" class="link-box__link webpack"></a>
-      <a href="" class="link-box__link webpack"></a>
+      <a href="https://webpack.js.org/loaders/" class="link-box__link webpack">Official Webpack Loaders</a>
     </div>
   </div>
-
-
-
 
   <div class="link-bar">
     <div class="container">
