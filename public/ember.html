@@ -25,6 +25,44 @@
 
     <div class="container">
       <h3 class="step">1. Make sure Ember is on your computer.</h3>
+      <div class="instructions">To install Ember enter:</div>
+      <div class="command">$ npm install -g ember-cli@2.14</div>
+      <div class="instructions">That should have installed Ember.</div>
+
+      <h3 class="step">2. Let's start a new project.</h3>
+      <div class="instructions">Get into the correct folder and type:</div>
+      <div class="command">$ ember new ember-demo</div>
+      <div class="instructions">Don't forget to get into that file.</div>
+      <div class="command">$ cd ember-demo</div>
+      <div class="instructions">Go ahead and open your project in an editor.</div>
+
+      <h3 class="step">3. Let's change the file structure that Ember uses.</h3>
+      <div class="instructions">Go to the .ember-cli file. It should look like this now</div>
+      <div class="command">{<br>
+                          /**<br>
+                            Ember CLI sends analytics information by default. The data is completely<br>
+                            anonymous, but there are times when you might want to disable this behavior.<br>
+
+                            Setting `disableAnalytics` to true will prevent any data from being sent.<br>
+                          */<br>
+                          "disableAnalytics": false<br>
+                          }<br>
+      </div>
+      <div class="instructions">We need to make it look like this</div>
+      <div class="command">{<br>
+                          /**<br>
+                            Ember CLI sends analytics information by default. The data is completely<br>
+                            anonymous, but there are times when you might want to disable this behavior.<br>
+
+                            Setting `disableAnalytics` to true will prevent any data from being sent.<br>
+                          */<br>
+                          "disableAnalytics": false,<br>
+                          "usePods": true<br>
+                        }
+      </div>
+
+
+
     </div>
 
 
