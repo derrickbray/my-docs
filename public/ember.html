@@ -77,13 +77,50 @@
       </div>
 
       <h2 class="section">Let's make some routes.</h2>
-      <h3 class="step">1. First we need the application route.</h3>
+
+      <h3 class="step">1. Let's add some default styles</h3>
+      <div class="instructions">Create a new file in app/styles folder named _box-sizing.scss</div>
+      <div class="instructions">Then add this:</div>
+      <div class="command">* {<br>
+                              box-sizing: border-box;<br>
+                            }<br>
+                            html {<br>
+                              margin: 0;<br>
+                            }<br>
+                            body {<br>
+                              margin: 0;<br>
+                            }<br>
+                            ul {<br>
+                              padding: 0;<br>
+                              list-style: none;<br>
+                            }<br>
+                            a {<br>
+                              text-decoration: none;<br>
+                              &:hover {<br>
+                                text-decoration: underline;<br>
+                              }<br>
+                            }<br>
+                            .container {<br>
+                              max-width: 65rem;<br>
+                              margin: 0 auto;<br>
+                            }<br>
+                            img {<br>
+                              max-width: 100%;<br>
+                              max-height: 100%;<br>
+                            }
+      </div>
+      <div class="instructions">This file should be universal styles.</div>
+      <div class="instructions">Now we need to link this to the app.scss file. Add this to the top.</div>
+      <div class="command">$ @import 'box-sizing';</div>
+
+      <h3 class="step">2. Now we need the application route.</h3>
       <div class="instructions">The application route will be the our default view.</div>
       <div class="instructions">Anything here will be everypage. So top-navs and footers belong here.</div>
       <div class="command">$ ember g route application</div>
 
-      <h3 class="step">2. Go to the new application template.</h3>
+      <h3 class="step">3. Go to the new application template.</h3>
       <div class="instructions">There you should see <div class="ember">{{outlet}}</div>.</div>
+      <div class="instructions">Add the Nav-bar before the {{outlet}}</div>
 
 
     </div>
