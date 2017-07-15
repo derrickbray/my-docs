@@ -76,7 +76,7 @@
         <img class="pic-box__img" src="../images/welcome-ember.png" alt="">
       </div>
 
-      <h2 class="section">Let's make some routes.</h2>
+      <h2 class="section">Let's make some styles and routes.</h2>
 
       <h3 class="step">1. Let's add some default styles</h3>
       <div class="instructions">Create a new file in app/styles folder named _box-sizing.scss</div>
@@ -120,7 +120,27 @@
 
       <h3 class="step">3. Go to the new application template.</h3>
       <div class="instructions">There you should see <div class="ember">{{outlet}}</div>.</div>
-      <div class="instructions">Add the Nav-bar before the {{outlet}}</div>
+      <div class="instructions">We will add our nav section before the {{outlet}}</div>
+      <div class="instructions">In app/application/template.hbs add this(you will need to add all of the brackets)</div>
+      <div class="command">nav class="nav"<br>
+                            div class="container"<br>
+                            div class="nav__content"<br>
+                            h1 class="nav__content-title"Ember Demo/h1<br>
+                            div class="nav__content-box"<br>
+                            h3 class="nav__content-box-link"Page 1/h3<br>
+                            h3 class="nav__content-box-link"Page 2/h3<br>
+                            h3 class="nav__content-box-link"Page 3/h3<br>
+                            /div<br>
+                            /div<br>
+                            /div<br>
+                            /nav<br>
+                            {{outlet}}<br>
+        </div>
+
+        <h3 class="step">4. Now add the styles for the nav.</h3>
+        <div class="instructions">Create a new file in app/styles folder named _nav.scss</div>
+        <div class="instructions">Go ahead and link this in the app.scss</div>
+        <div class="command">$ @import 'nav';</div>
 
 
     </div>
