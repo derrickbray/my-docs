@@ -20,3 +20,20 @@ $c-webpack: #7197d8;
 .webpack {
   color: $c-webpack;
 }
+
+.index {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  &-item {
+    margin: 2rem auto;
+    object-fit: contain;
+
+    &-pic {
+      max-height: 12rem;
+
+    }
+  }
+}
