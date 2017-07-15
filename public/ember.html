@@ -111,7 +111,7 @@
       </div>
       <div class="instructions">This file should be universal styles.</div>
       <div class="instructions">Now we need to link this to the app.scss file. Add this to the top.</div>
-      <div class="command">$ @import 'box-sizing';</div>
+      <div class="command">@import 'box-sizing';</div>
 
       <h3 class="step">2. Now we need the application route.</h3>
       <div class="instructions">The application route will be the our default view.</div>
@@ -127,9 +127,9 @@
                             div class="nav__content"<br>
                             h1 class="nav__content-title"Ember Demo/h1<br>
                             div class="nav__content-box"<br>
-                            h3 class="nav__content-box-link"Page 1/h3<br>
-                            h3 class="nav__content-box-link"Page 2/h3<br>
-                            h3 class="nav__content-box-link"Page 3/h3<br>
+                            a href="" class="nav__content-box-link"Page 1/a<br>
+                            a href="" class="nav__content-box-link"Page 2/a<br>
+                            a href="" class="nav__content-box-link"Page 3/a<br>
                             /div<br>
                             /div<br>
                             /div<br>
@@ -140,7 +140,39 @@
         <h3 class="step">4. Now add the styles for the nav.</h3>
         <div class="instructions">Create a new file in app/styles folder named _nav.scss</div>
         <div class="instructions">Go ahead and link this in the app.scss</div>
-        <div class="command">$ @import 'nav';</div>
+        <div class="command">@import 'nav';</div>
+        <div class="instructions">In the nav.scss paste this:</div>
+        <div class="command">
+          .nav {<br>
+            margin: 0;<br>
+            background: #e77562;<br>
+
+            &__content {<br>
+              display: flex;<br>
+              justify-content: space-between;<br>
+              color: white;<br>
+
+              &-box {<br>
+                margin: 1.5rem;<br>
+                display: flex;<br>
+
+                &-link {<br>
+                  margin-left: 1rem;<br>
+                  color: white;<br>
+                }<br>
+              }<br>
+            }<br>
+          }<br>
+        </div>
+
+        <h3 class="step">5. Check your build</h3>
+        <div class="instructions">If your server is not running go ahead and start it.</div>
+        <div class="command">$ npm start</div>
+        <div class="instructions">It should look like this</div>
+
+        <div class="pic-box">
+          <img class="pic-box__img" src="../images/nav-ember.png" alt="">
+        </div>
 
 
     </div>
