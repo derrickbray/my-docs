@@ -191,6 +191,35 @@
 
         <h3 class="step">3. Create a new scss file</h3>
         <div class="instructions">Create a new file in app/styles folder named _center.scss</div>
+        <div class="instructions">Go ahead and link this in the app.scss</div>
+        <div class="command">@import 'center';</div>
+
+        <h3 class="step">4. Now add some style</h3>
+        <div class="instructions">Go to app/styles/center.scss and add</div>
+        <div class="command">
+          .center {<br>
+            display: flex;<br>
+            flex-direction: column;<br>
+            justify-content: center;<br>
+            height: 80vh;<br>
+
+            &__tag {<br>
+              text-align: center;<br>
+            }<br>
+          }
+        </div>
+
+        <h2 class="section">We need some more routes</h2>
+
+        <h3 class="step">1. We need to add some more routes.</h3>
+        <div class="instructions">Add a sidebar route with some nested routes.</div>
+        <div class="command">$ ember g route sidebar</div>
+        <div class="command">$ ember g route sidebar/option-one</div>
+        <div class="command">$ ember g route sidebar/option-two</div>
+        <div class="instructions">Let's add two more routes to give us more to link to.</div>
+        <div class="command">$ ember g route about</div>
+        <div class="command">$ ember g route contact</div>
+
 
 
     </div>
