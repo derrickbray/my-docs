@@ -21,7 +21,7 @@
       </div>
     </div>
 
-    <h1 class="title ember">Build a Simple app using EmberJS</h1>
+    <h1 class="title ember">Build a Simple app using EmberJS routes</h1>
 
     <div class="container">
       <h3 class="step">1. Make sure Ember is on your computer.</h3>
@@ -263,13 +263,61 @@
 
         <h2 class="section">Time for nested routes</h2>
 
-        <h3 class="step">1. Make a new file.</h3>
+        <h3 class="step">1. Time for some markup</h3>
+        <div class="instructions">Go to app/sidebar/template.hbs and do this(add the brackets):</div>
+        <div class="command">
+          div class="bar"<br>
+            div class="bar__sidebar"<br>
+              h2 class="bar__sidebar-title"SideBar/h2<br>
+              div class="bar__sidebar-tag"This will stay for all of the nested routes./div<br>
+              {{#link-to "sidebar.index" class="bar__sidebar-link"}}This is the main or index link.{{/link-to}}<br>
+              {{#link-to "sidebar.option-one" class="bar__sidebar-link"}}Here is the first option{{/link-to}}<br>
+              {{#link-to "sidebar.option-two" class="bar__sidebar-link"}}Here is the second option{{/link-to}}<br>
+              a href="https://emberjs.com/" class="bar__sidebar-link"EmberJS/a<br>
+              a href="https://www.google.com/" class="bar__sidebar-link"Google/a<br>
+              a href="http://www.bing.com/" class="bar__sidebar-link"Bing/a<br>
+              {{#link-to "index" class="bar__sidebar-link"}}Back to Home{{/link-to}}<br>
+            /div<br>
+            div class="bar__content"<br>
+              {{outlet}}<br>
+            /div<br>
+          /div<br>
+        </div>
+
+        <div class="instructions">Go to app/sidebar/index/template.hbs(don't forget to add the brackets)</div>
+        <div class="command">
+          div class="center"
+            h1 class="center__tag"This is the Sidebar Index Page/h1
+          /div
+        </div>
+        <div class="instructions">Now you can do the same for both of the other option pages. Just change the page names</div>
+
+        <h3 class="step">2. Add our styles.</h3>
         <div class="instructions">Create a new file at app/styles/sidebar.scss</div>
         <div class="instructions">Link that new file to the app.scss</div>
         <div class="command">@import 'sidebar';</div>
-
-        <h3 class="step">Time for some markup</h3>
-        <div class="instructions">Go to app/sidebar/template.hbs</div>
+        <div class="instructions">Go back to the app/styles/sidebar.scss and add</div>
+        <div class="command">
+          .bar {<br>
+            display: flex;<br>
+            &__sidebar {<br>
+              width: 25%;<br>
+              padding: 0.5rem;<br>
+              border-right: 1px solid black;<br>
+              text-align: center;<br>
+              &-tag {<br>
+                margin-bottom: 1rem;<br>
+              }<br>
+              &-link {<br>
+                display: block;<br>
+                margin: 0.5rem;<br>
+              }<br>
+            }<br>
+            &__content {<br>
+              width: 75%;<br>
+            }<br>
+          }
+        </div>
 
 
     </div>
