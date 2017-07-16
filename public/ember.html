@@ -26,19 +26,19 @@
     <div class="container">
       <h3 class="step">1. Make sure Ember is on your computer.</h3>
       <div class="instructions">To install Ember enter:</div>
-      <div class="command">$ npm install -g ember-cli@2.14</div>
+      <div class="command ember">$ npm install -g ember-cli@2.14</div>
       <div class="instructions">That should have installed Ember.</div>
 
       <h3 class="step">2. Let's start a new project.</h3>
       <div class="instructions">Get into the correct folder and type:</div>
-      <div class="command">$ ember new ember-demo</div>
+      <div class="command ember">$ ember new ember-demo</div>
       <div class="instructions">Don't forget to get into that file.</div>
-      <div class="command">$ cd ember-demo</div>
+      <div class="command ember">$ cd ember-demo</div>
       <div class="instructions">Go ahead and open your project in an editor.</div>
 
       <h3 class="step">3. Let's change the file structure that Ember uses.</h3>
       <div class="instructions">Go to the .ember-cli file. It should look like this now</div>
-      <div class="command">{<br>
+      <div class="command ember">{<br>
                           /**<br>
                             Ember CLI sends analytics information by default. The data is completely<br>
                             anonymous, but there are times when you might want to disable this behavior.<br>
@@ -49,7 +49,7 @@
                           }<br>
       </div>
       <div class="instructions">We need to make it look like this</div>
-      <div class="command">{<br>
+      <div class="command ember">{<br>
                           /**<br>
                             Ember CLI sends analytics information by default. The data is completely<br>
                             anonymous, but there are times when you might want to disable this behavior.<br>
@@ -62,12 +62,12 @@
       </div>
       <h3 class="step">4. Let's use SCSS instead of CSS.</h3>
       <div class="instructions">Go to the command line.</div>
-      <div class="command">$ ember install ember-cli-sass</div>
+      <div class="command ember">$ ember install ember-cli-sass</div>
       <div class="instructions">Now we need to rename the app/styles/app.css to app/styles/app.scss</div>
 
       <h3 class="step">Let's see if we have a good build</h3>
       <div class="instructions">To the command line</div>
-      <div class="command">$ npm start</div>
+      <div class="command ember">$ npm start</div>
 
       <div class="instructions">If all went well you should see this at <a href="localhost:4200">localhost:4200</a>
       </div>
@@ -81,7 +81,7 @@
       <h3 class="step">1. Let's add some default styles</h3>
       <div class="instructions">Create a new file in app/styles folder named _box-sizing.scss</div>
       <div class="instructions">Then add this:</div>
-      <div class="command">* {<br>
+      <div class="command ember">* {<br>
                               box-sizing: border-box;<br>
                             }<br>
                             html {<br>
@@ -111,18 +111,18 @@
       </div>
       <div class="instructions">This file should be universal styles.</div>
       <div class="instructions">Now we need to link this to the app.scss file. Add this to the top.</div>
-      <div class="command">@import 'box-sizing';</div>
+      <div class="command ember">@import 'box-sizing';</div>
 
       <h3 class="step">2. Now we need the application route.</h3>
       <div class="instructions">The application route will be the our default view.</div>
       <div class="instructions">Anything here will be everypage. So top-navs and footers belong here.</div>
-      <div class="command">$ ember g route application</div>
+      <div class="command ember">$ ember g route application</div>
 
       <h3 class="step">3. Go to the new application template.</h3>
-      <div class="instructions">There you should see <div class="ember">{{outlet}}</div>.</div>
+      <div class="instructions">There you should see {outlet}}.</div>
       <div class="instructions">We will add our nav section before the {{outlet}}</div>
       <div class="instructions">In app/application/template.hbs add this(you will need to add all of the brackets)</div>
-      <div class="command">nav class="nav"<br>
+      <div class="command ember">nav class="nav"<br>
                             div class="container"<br>
                             div class="nav__content"<br>
                             h1 class="nav__content-title"Ember Demo/h1<br>
@@ -140,9 +140,9 @@
         <h3 class="step">4. Now add the styles for the nav.</h3>
         <div class="instructions">Create a new file in app/styles folder named _nav.scss</div>
         <div class="instructions">Go ahead and link this in the app.scss</div>
-        <div class="command">@import 'nav';</div>
+        <div class="command ember">@import 'nav';</div>
         <div class="instructions">In the nav.scss paste this:</div>
-        <div class="command">
+        <div class="command ember">
           .nav {<br>
             margin: 0;<br>
             background: #e77562;<br>
@@ -167,7 +167,7 @@
 
         <h3 class="step">5. Check your build</h3>
         <div class="instructions">If your server is not running go ahead and start it.</div>
-        <div class="command">$ npm start</div>
+        <div class="command ember">$ npm start</div>
         <div class="instructions">It should look like this</div>
 
         <div class="pic-box">
@@ -179,11 +179,11 @@
 
         <h3 class="step">1. Create the route</h3>
         <div class="instructions">Back to the command line</div>
-        <div class="command">$ ember g route index</div>
+        <div class="command ember">$ ember g route index</div>
 
         <h3 class="step">2. Write some HTML</h3>
         <div class="instructions">Now go to app/index/template.hbs and enter this(you need to add the html tags)</div>
-        <div class="command">
+        <div class="command ember">
           div class="center"<br>
             h1 class="center__tag"This is the index/h1<br>
           /div<br>
@@ -192,11 +192,11 @@
         <h3 class="step">3. Create a new scss file</h3>
         <div class="instructions">Create a new file in app/styles folder named _center.scss</div>
         <div class="instructions">Go ahead and link this in the app.scss</div>
-        <div class="command">@import 'center';</div>
+        <div class="command ember">@import 'center';</div>
 
         <h3 class="step">4. Now add some style</h3>
         <div class="instructions">Go to app/styles/center.scss and add</div>
-        <div class="command">
+        <div class="command ember">
           .center {<br>
             display: flex;<br>
             flex-direction: column;<br>
@@ -213,59 +213,59 @@
 
         <h3 class="step">1. We need to add some more routes.</h3>
         <div class="instructions">Add a sidebar route with some nested routes.</div>
-        <div class="command">$ ember g route sidebar</div>
-        <div class="command">$ ember g route sidebar/option-one</div>
-        <div class="command">$ ember g route sidebar/option-two</div>
+        <div class="command ember">$ ember g route sidebar</div>
+        <div class="command ember">$ ember g route sidebar/option-one</div>
+        <div class="command ember">$ ember g route sidebar/option-two</div>
         <div class="instructions">Let's add two more routes to give us more to link to.</div>
-        <div class="command">$ ember g route about</div>
-        <div class="command">$ ember g route contact</div>
+        <div class="command ember">$ ember g route about</div>
+        <div class="command ember">$ ember g route contact</div>
 
         <h2 class="step">2. Let's change the a tags to link-to ember tags</h2>
         <div class="instructions">Go to app/application/template.hbs it should look like this:</div>
-        <div class="command">
+        <div class="command ember">
           <nav class="nav">
-            div class="container"
-              div class="nav__content"
-                h1 class="nav__content-title"Ember Demo/h1
-                div class="nav__content-box"
-                  a href="" class="nav__content-box-link"Page 1/a
-                  a href="" class="nav__content-box-link"Page 2/a
-                  a href="" class="nav__content-box-link"Page 3/a
-                /div
-              /div
-            /div
-          /nav
+            div class="container"<br>
+              div class="nav__content"<br>
+                h1 class="nav__content-title"Ember Demo/h1<br>
+                div class="nav__content-box"<br>
+                  a href="" class="nav__content-box-link"Page 1/a<br>
+                  a href="" class="nav__content-box-link"Page 2/a<br>
+                  a href="" class="nav__content-box-link"Page 3/a<br>
+                /div<br>
+              /div<br>
+            /div<br>
+          /nav<br>
           {{outlet}}
         </div>
         <div class="instructions">Make it look like this instead. Don't forget the html brackets!</div>
-        <div class="command">
-          nav class="nav"
-            div class="container"
-              div class="nav__content"
-                {{#link-to "index" class="nav__content-box-link"}}h1Ember Demo/h1{{/link-to}}
-                div class="nav__content-box"
-                  {{#link-to "sidebar" class="nav__content-box-link"}}Sidebar{{/link-to}}
-                  {{#link-to "about" class="nav__content-box-link"}}About{{/link-to}}
-                  {{#link-to "contact" class="nav__content-box-link"}}Contact{{/link-to}}
-                /div
-              /div
-            /div
-          /nav
-          {{outlet}}
+        <div class="command ember">
+          nav class="nav"<br>
+            div class="container"<br>
+              div class="nav__content"<br>
+                {{#link-to "index" class="nav__content-box-link"}}h1Ember Demo/h1{{/link-to}}<br>
+                div class="nav__content-box"<br>
+                  {{#link-to "sidebar" class="nav__content-box-link"}}Sidebar{{/link-to}}<br>
+                  {{#link-to "about" class="nav__content-box-link"}}About{{/link-to}}<br>
+                  {{#link-to "contact" class="nav__content-box-link"}}Contact{{/link-to}}<br>
+                /div<br>
+              /div<br>
+            /div<br>
+          /nav<br>
+          {{outlet}}<br>
         </div>
 
         <h3 class="step">3. Make sure the links work</h3>
         <div class="instructions">You can check by adding something in each template that is unique.</div>
         <div class="instructions">Go to app/about/template.hbs and just add this to the top</div>
-        <div class="command">Hello from the about page!</div>
+        <div class="command ember">Hello from the about page!</div>
         <div class="instructions">Go to app/contact/template.hbs and just add this to the top</div>
-        <div class="command">Hello from the contact page!</div>
+        <div class="command ember">Hello from the contact page!</div>
 
         <h2 class="section">Time for nested routes</h2>
 
         <h3 class="step">1. Time for some markup</h3>
         <div class="instructions">Go to app/sidebar/template.hbs and do this(add the brackets):</div>
-        <div class="command">
+        <div class="command ember">
           div class="bar"<br>
             div class="bar__sidebar"<br>
               h2 class="bar__sidebar-title"SideBar/h2<br>
@@ -285,7 +285,7 @@
         </div>
 
         <div class="instructions">Go to app/sidebar/index/template.hbs(don't forget to add the brackets)</div>
-        <div class="command">
+        <div class="command ember">
           div class="center"
             h1 class="center__tag"This is the Sidebar Index Page/h1
           /div
@@ -295,9 +295,9 @@
         <h3 class="step">2. Add our styles.</h3>
         <div class="instructions">Create a new file at app/styles/sidebar.scss</div>
         <div class="instructions">Link that new file to the app.scss</div>
-        <div class="command">@import 'sidebar';</div>
+        <div class="command ember">@import 'sidebar';</div>
         <div class="instructions">Go back to the app/styles/sidebar.scss and add</div>
-        <div class="command">
+        <div class="command ember">
           .bar {<br>
             display: flex;<br>
             &__sidebar {<br>
@@ -318,10 +318,8 @@
             }<br>
           }
         </div>
-
-
     </div>
-
+https://github.com/derrickbray/ember-demo
 
   </body>
 </html>
