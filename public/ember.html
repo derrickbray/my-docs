@@ -121,22 +121,22 @@
       <h3 class="step">3. Go to the new application template.</h3>
       <div class="instructions">There you should see {{outlet}}.</div>
       <div class="instructions">We will add our nav section before the {{outlet}}</div>
-      <div class="instructions">In app/application/template.hbs add this<div class="red">(you will need to add all of  the brackets)</div>
+      <div class="instructions">In app/application/template.hbs add this</div>
+      <div class="command ember">
+        &lt;nav class="nav"><br>
+          &lt;div class="container"&gt;<br>
+            &lt;div class="nav__content"&gt;<br>
+              &lt;h1 class="nav__content-title"&gt;Ember Demo&lt;/h1&gt;<br>
+              &lt;div class="nav__content-box"&gt;<br>
+                &lt;a href="" class="nav__content-box-link"&gt;Page 1&lt;/a&gt;<br>
+                &lt;a href="" class="nav__content-box-link"&gt;Page 2&lt;/a&gt;<br>
+                &lt;a href="" class="nav__content-box-link"&gt;Page 3&lt;/a&gt;<br>
+              &lt;/div&gt;<br>
+            &lt;/div&gt;<br>
+          &lt;/div&gt;<br>
+        &lt;/nav&gt;<br>
+        {{outlet}}
       </div>
-      <div class="command ember">nav class="nav"<br>
-                            div class="container"<br>
-                            div class="nav__content"<br>
-                            h1 class="nav__content-title"Ember Demo/h1<br>
-                            div class="nav__content-box"<br>
-                            a href="" class="nav__content-box-link"Page 1/a<br>
-                            a href="" class="nav__content-box-link"Page 2/a<br>
-                            a href="" class="nav__content-box-link"Page 3/a<br>
-                            /div<br>
-                            /div<br>
-                            /div<br>
-                            /nav<br>
-                            {{outlet}}<br>
-        </div>
 
         <h3 class="step">4. Now add the styles for the nav.</h3>
         <div class="instructions">Create a new file in app/styles folder named _nav.scss</div>
@@ -185,9 +185,9 @@
         <h3 class="step">2. Write some HTML</h3>
         <div class="instructions">Now go to app/index/template.hbs and enter this(you need to add the html tags)</div>
         <div class="command ember">
-          div class="center"<br>
-            h1 class="center__tag"This is the index/h1<br>
-          /div<br>
+          &lt;div class="center"><br>
+            &lt;h1 class="center__tag">This is the Index Page&lt;/h1><br>
+          &lt;/div><br>
         </div>
 
         <h3 class="step">3. Create a new scss file</h3>
@@ -224,35 +224,35 @@
         <h2 class="step">2. Let's change the a tags to <a href="https://guides.emberjs.com/v2.14.0/templates/links/#toc_the-code-link-to-code-component" class="ember">link-to ember tags</a></h2>
         <div class="instructions">Go to app/application/template.hbs it should look like this:</div>
         <div class="command ember">
-          <nav class="nav">
-            div class="container"<br>
-              div class="nav__content"<br>
-                h1 class="nav__content-title"Ember Demo/h1<br>
-                div class="nav__content-box"<br>
-                  a href="" class="nav__content-box-link"Page 1/a<br>
-                  a href="" class="nav__content-box-link"Page 2/a<br>
-                  a href="" class="nav__content-box-link"Page 3/a<br>
-                /div<br>
-              /div<br>
-            /div<br>
-          /nav<br>
+          &lt;nav class="nav"><br>
+            &lt;div class="container"&gt;<br>
+              &lt;div class="nav__content"&gt;<br>
+                &lt;h1 class="nav__content-title"&gt;Ember Demo&lt;/h1&gt;<br>
+                &lt;div class="nav__content-box"&gt;<br>
+                  &lt;a href="" class="nav__content-box-link"&gt;Page 1&lt;/a&gt;<br>
+                  &lt;a href="" class="nav__content-box-link"&gt;Page 2&lt;/a&gt;<br>
+                  &lt;a href="" class="nav__content-box-link"&gt;Page 3&lt;/a&gt;<br>
+                &lt;/div&gt;<br>
+              &lt;/div&gt;<br>
+            &lt;/div&gt;<br>
+          &lt;/nav&gt;<br>
           {{outlet}}
         </div>
-        <div class="instructions">Make it look like this instead. <div class="red">Don't forget the html brackets!</div></div>
+        <div class="instructions">Make it look like this instead.</div>
         <div class="command ember">
-          nav class="nav"<br>
-            div class="container"<br>
-              div class="nav__content"<br>
-                {{#link-to "index" class="nav__content-box-link"}}h1Ember Demo/h1{{/link-to}}<br>
-                div class="nav__content-box"<br>
-                  {{#link-to "sidebar" class="nav__content-box-link"}}Sidebar{{/link-to}}<br>
+          &lt;nav class="nav"><br>
+            &lt;div class="container"><br>
+              &lt;div class="nav__content"><br>
+                {{#link-to "index" class="nav__content-box-link"}}&lt;h1>Ember Demo&lt;/h1>{{/link-to}}<br>
+                &lt;div class="nav__content-box"><br>
                   {{#link-to "about" class="nav__content-box-link"}}About{{/link-to}}<br>
                   {{#link-to "contact" class="nav__content-box-link"}}Contact{{/link-to}}<br>
-                /div<br>
-              /div<br>
-            /div<br>
-          /nav<br>
-          {{outlet}}<br>
+                  {{#link-to "sidebar" class="nav__content-box-link"}}Sidebar{{/link-to}}<br>
+                &lt;/div><br>
+              &lt;/div><br>
+            &lt;/div><br>
+          &lt;/nav><br>
+          {{outlet}}
         </div>
 
         <h3 class="step">3. Make sure the links work</h3>
@@ -265,31 +265,31 @@
         <h2 class="section ember">Time for nested routes</h2>
 
         <h3 class="step">1. Time for some markup</h3>
-        <div class="instructions">Go to app/sidebar/template.hbs and do this<div class="red">(add the brackets)</div></div>
+        <div class="instructions">Go to app/sidebar/template.hbs and do this</div>
         <div class="command ember">
-          div class="bar"<br>
-            div class="bar__sidebar"<br>
-              h2 class="bar__sidebar-title"SideBar/h2<br>
-              div class="bar__sidebar-tag"This will stay for all of the nested routes./div<br>
+          &lt;div class="bar"><br>
+            &lt;div class="bar__sidebar"><br>
+              &lt;h2 class="bar__sidebar-title">SideBar&lt;/h2><br>
+              &lt;div class="bar__sidebar-tag">This will stay for all of the nested routes.&lt;/div><br>
               {{#link-to "sidebar.index" class="bar__sidebar-link"}}This is the main or index link.{{/link-to}}<br>
               {{#link-to "sidebar.option-one" class="bar__sidebar-link"}}Here is the first option{{/link-to}}<br>
               {{#link-to "sidebar.option-two" class="bar__sidebar-link"}}Here is the second option{{/link-to}}<br>
-              a href="https://emberjs.com/" class="bar__sidebar-link"EmberJS/a<br>
-              a href="https://www.google.com/" class="bar__sidebar-link"Google/a<br>
-              a href="http://www.bing.com/" class="bar__sidebar-link"Bing/a<br>
+              &lt;a href="https://emberjs.com/" class="bar__sidebar-link">EmberJS&lt;/a><br>
+              &lt;a href="https://www.google.com/" class="bar__sidebar-link">Google&lt;/a><br>
+              &lt;a href="http://www.bing.com/" class="bar__sidebar-link">Bing&lt;/a><br>
               {{#link-to "index" class="bar__sidebar-link"}}Back to Home{{/link-to}}<br>
-            /div<br>
-            div class="bar__content"<br>
+            &lt;/div><br>
+            &lt;div class="bar__content"><br>
               {{outlet}}<br>
-            /div<br>
-          /div<br>
+            &lt;/div><br>
+          &lt;/div>
         </div>
 
-        <div class="instructions">Go to app/sidebar/index/template.hbs<div class="red">(don't forget to add the brackets)</div></div>
+        <div class="instructions">Go to app/sidebar/index/template.hbs</div>
         <div class="command ember">
-          div class="center"<br>
-            h1 class="center__tag"This is the Sidebar Index Page/h1<br>
-          /div<br>
+          &lt;div class="center"><br>
+            &lt;h1 class="center__tag">This is the Sidebar Index Page&lt;/h1><br>
+          &lt;/div><br>
         </div>
         <div class="instructions">Now you can do the same for both of the other option pages. Just change the page names</div>
 
