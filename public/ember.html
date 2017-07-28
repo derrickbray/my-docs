@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Ember Routes Tutorial</title>
     <link rel="stylesheet" href="/app.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
     <div class="nav">
@@ -38,28 +40,28 @@
 
       <h3 class="step">3. Let's change the file structure that Ember uses.</h3>
       <div class="instructions">Go to the .ember-cli file. It should look like this now</div>
-      <div class="command ember">{<br>
-                          /**<br>
-                            Ember CLI sends analytics information by default. The data is completely<br>
-                            anonymous, but there are times when you might want to disable this behavior.<br>
-
-                            Setting `disableAnalytics` to true will prevent any data from being sent.<br>
-                          */<br>
-                          "disableAnalytics": false<br>
-                          }<br>
-      </div>
+      <div class="command ember"><pre class="json"><code>
+        {
+          /**
+          Ember CLI sends analytics information by default. The data is completely
+          anonymous, but there are times when you might want to disable this behavior.
+          Setting `disableAnalytics` to true will prevent any data from being sent.
+          */
+          "disableAnalytics": false
+        }
+          </code></pre></div>
       <div class="instructions">We need to make it look like this</div>
-      <div class="command ember">{<br>
-                          /**<br>
-                            Ember CLI sends analytics information by default. The data is completely<br>
-                            anonymous, but there are times when you might want to disable this behavior.<br>
-
-                            Setting `disableAnalytics` to true will prevent any data from being sent.<br>
-                          */<br>
-                          "disableAnalytics": false,<br>
-                          "usePods": true<br>
-                        }
-      </div>
+      <div class="command ember"><pre><code class="json">
+      {
+        /**
+        Ember CLI sends analytics information by default. The data is completely
+        anonymous, but there are times when you might want to disable this behavior.
+        Setting `disableAnalytics` to true will prevent any data from being sent.
+        */
+        "disableAnalytics": false,
+        "usePods": true
+      }
+          </code></pre></div>
       <h3 class="step">4. Let's use <a href="http://sass-lang.com/" class="ember">SCSS</a> instead of CSS.</h3>
       <div class="instructions">Go to the command line.</div>
       <div class="command ember">$ ember install ember-cli-sass</div>
