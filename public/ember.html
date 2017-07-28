@@ -132,21 +132,21 @@
       <div class="instructions">There you should see {{outlet}}.</div>
       <div class="instructions">We will add our nav section before the {{outlet}}</div>
       <div class="instructions">In app/application/template.hbs add this</div>
-      <div class="command ember">
-        &lt;nav class="nav"><br>
-          &lt;div class="container"&gt;<br>
-            &lt;div class="nav__content"&gt;<br>
-              &lt;h1 class="nav__content-title"&gt;Ember Demo&lt;/h1&gt;<br>
-              &lt;div class="nav__content-box"&gt;<br>
-                &lt;a href="" class="nav__content-box-link"&gt;Page 1&lt;/a&gt;<br>
-                &lt;a href="" class="nav__content-box-link"&gt;Page 2&lt;/a&gt;<br>
-                &lt;a href="" class="nav__content-box-link"&gt;Page 3&lt;/a&gt;<br>
-              &lt;/div&gt;<br>
-            &lt;/div&gt;<br>
-          &lt;/div&gt;<br>
-        &lt;/nav&gt;<br>
-        {{outlet}}
-      </div>
+      <div class="command ember"><pre><code class="html">
+&lt;nav class="nav">
+  &lt;div class="container"&gt;
+    &lt;div class="nav__content"&gt;
+      &lt;h1 class="nav__content-title"&gt;Ember Demo&lt;/h1&gt;
+      &lt;div class="nav__content-box"&gt;
+        &lt;a href="" class="nav__content-box-link"&gt;Page 1&lt;/a&gt;
+        &lt;a href="" class="nav__content-box-link"&gt;Page 2&lt;/a&gt;
+        &lt;a href="" class="nav__content-box-link"&gt;Page 3&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+{{outlet}}
+          </code></pre></div>
 
         <h3 class="step">4. Now add the styles for the nav.</h3>
         <div class="instructions">Create a new file in app/styles folder named _nav.scss</div>
