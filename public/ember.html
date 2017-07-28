@@ -153,28 +153,28 @@
         <div class="instructions">Go ahead and link this in the app.scss</div>
         <div class="command ember">@import 'nav';</div>
         <div class="instructions">In the nav.scss paste this:</div>
-        <div class="command ember">
-          .nav {<br>
-            margin: 0;<br>
-            background: #e77562;<br>
+        <div class="command ember"><pre><code class="scss">
+.nav {
+  margin: 0;
+  background: #e77562;
 
-            &__content {<br>
-              display: flex;<br>
-              justify-content: space-between;<br>
-              color: white;<br>
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    color: white;
 
-              &-box {<br>
-                margin: 1.5rem;<br>
-                display: flex;<br>
+    &-box {
+      margin: 1.5rem;
+      display: flex;
 
-                &-link {<br>
-                  margin-left: 1rem;<br>
-                  color: white;<br>
-                }<br>
-              }<br>
-            }<br>
-          }<br>
-        </div>
+      &-link {
+        margin-left: 1rem;
+        color: white;
+      }
+    }
+  }
+}
+            </code></pre></div>
 
         <h3 class="step">5. Check your build</h3>
         <div class="instructions">If your server is not running go ahead and start it.</div>
@@ -195,7 +195,7 @@
         <h3 class="step">2. Write some HTML</h3>
         <div class="instructions">Now go to app/index/template.hbs and enter this(you need to add the html tags)</div>
         <div class="command ember">
-          &lt;div class="center"><br>
+          &lt;div class="center">
             &lt;h1 class="center__tag">This is the Index Page&lt;/h1><br>
           &lt;/div><br>
         </div>
