@@ -233,37 +233,37 @@
 
         <h2 class="step">2. Let's change the a tags to <a href="https://guides.emberjs.com/v2.14.0/templates/links/#toc_the-code-link-to-code-component" class="ember">link-to ember tags</a></h2>
         <div class="instructions">Go to app/application/template.hbs it should look like this:</div>
-        <div class="command ember">
-          &lt;nav class="nav">
-            &lt;div class="container"&gt;<br>
-              &lt;div class="nav__content"&gt;<br>
-                &lt;h1 class="nav__content-title"&gt;Ember Demo&lt;/h1&gt;<br>
-                &lt;div class="nav__content-box"&gt;<br>
-                  &lt;a href="" class="nav__content-box-link"&gt;Page 1&lt;/a&gt;<br>
-                  &lt;a href="" class="nav__content-box-link"&gt;Page 2&lt;/a&gt;<br>
-                  &lt;a href="" class="nav__content-box-link"&gt;Page 3&lt;/a&gt;<br>
-                &lt;/div&gt;<br>
-              &lt;/div&gt;<br>
-            &lt;/div&gt;<br>
-          &lt;/nav&gt;<br>
-          {{outlet}}
-        </div>
+        <div class="command ember"><pre><code class="html">
+&lt;nav class="nav">
+  &lt;div class="container"&gt;
+    &lt;div class="nav__content"&gt;
+      &lt;h1 class="nav__content-title"&gt;Ember Demo&lt;/h1&gt;
+      &lt;div class="nav__content-box"&gt;
+        &lt;a href="" class="nav__content-box-link"&gt;Page 1&lt;/a&gt;
+        &lt;a href="" class="nav__content-box-link"&gt;Page 2&lt;/a&gt;
+        &lt;a href="" class="nav__content-box-link"&gt;Page 3&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+{{outlet}}
+            </code></pre></div>
         <div class="instructions">Make it look like this instead.</div>
-        <div class="command ember">
-          &lt;nav class="nav"><br>
-            &lt;div class="container"><br>
-              &lt;div class="nav__content"><br>
-                {{#link-to "index" class="nav__content-box-link"}}&lt;h1>Ember Demo&lt;/h1>{{/link-to}}<br>
-                &lt;div class="nav__content-box"><br>
-                  {{#link-to "about" class="nav__content-box-link"}}About{{/link-to}}<br>
-                  {{#link-to "contact" class="nav__content-box-link"}}Contact{{/link-to}}<br>
-                  {{#link-to "sidebar" class="nav__content-box-link"}}Sidebar{{/link-to}}<br>
-                &lt;/div><br>
-              &lt;/div><br>
-            &lt;/div><br>
-          &lt;/nav><br>
-          {{outlet}}
-        </div>
+        <div class="command ember"><pre><code class="html">
+&lt;nav class="nav">
+  &lt;div class="container">
+    &lt;div class="nav__content">
+      {{#link-to "index" class="nav__content-box-link"}}&lt;h1>Ember Demo&lt;/h1>{{/link-to}}
+      &lt;div class="nav__content-box">
+        {{#link-to "about" class="nav__content-box-link"}}About{{/link-to}}
+        {{#link-to "contact" class="nav__content-box-link"}}Contact{{/link-to}}
+        {{#link-to "sidebar" class="nav__content-box-link"}}Sidebar{{/link-to}}
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+&lt;/nav>
+{{outlet}}
+            </code></pre></div>
 
         <h3 class="step">3. Make sure the links work</h3>
         <div class="instructions">You can check by adding something in each template that is unique.</div>
