@@ -194,11 +194,11 @@
 
         <h3 class="step">2. Write some HTML</h3>
         <div class="instructions">Now go to app/index/template.hbs and enter this(you need to add the html tags)</div>
-        <div class="command ember">
-          &lt;div class="center">
-            &lt;h1 class="center__tag">This is the Index Page&lt;/h1><br>
-          &lt;/div><br>
-        </div>
+        <div class="command ember"><pre><code class="html">
+&lt;div class="center">
+  &lt;h1 class="center__tag">This is the Index Page&lt;/h1>
+&lt;/div>
+            </code></pre></div>
 
         <h3 class="step">3. Create a new scss file</h3>
         <div class="instructions">Create a new file in app/styles folder named _center.scss</div>
@@ -207,18 +207,18 @@
 
         <h3 class="step">4. Now add some style</h3>
         <div class="instructions">Go to app/styles/center.scss and add</div>
-        <div class="command ember">
-          .center {<br>
-            display: flex;<br>
-            flex-direction: column;<br>
-            justify-content: center;<br>
-            height: 80vh;<br>
+        <div class="command ember"><pre><code class="scss">
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
 
-            &__tag {<br>
-              text-align: center;<br>
-            }<br>
-          }
-        </div>
+  &__tag {
+    text-align: center;
+  }
+}
+            </code></pre></div>
 
         <h2 class="section ember">We need some more routes</h2>
 
@@ -234,7 +234,7 @@
         <h2 class="step">2. Let's change the a tags to <a href="https://guides.emberjs.com/v2.14.0/templates/links/#toc_the-code-link-to-code-component" class="ember">link-to ember tags</a></h2>
         <div class="instructions">Go to app/application/template.hbs it should look like this:</div>
         <div class="command ember">
-          &lt;nav class="nav"><br>
+          &lt;nav class="nav">
             &lt;div class="container"&gt;<br>
               &lt;div class="nav__content"&gt;<br>
                 &lt;h1 class="nav__content-title"&gt;Ember Demo&lt;/h1&gt;<br>
