@@ -276,31 +276,31 @@
 
         <h3 class="step">1. Time for some markup</h3>
         <div class="instructions">Go to app/sidebar/template.hbs and do this</div>
-        <div class="command ember">
-          &lt;div class="bar"><br>
-            &lt;div class="bar__sidebar"><br>
-              &lt;h2 class="bar__sidebar-title">SideBar&lt;/h2><br>
-              &lt;div class="bar__sidebar-tag">This will stay for all of the nested routes.&lt;/div><br>
-              {{#link-to "sidebar.index" class="bar__sidebar-link"}}This is the main or index link.{{/link-to}}<br>
-              {{#link-to "sidebar.option-one" class="bar__sidebar-link"}}Here is the first option{{/link-to}}<br>
-              {{#link-to "sidebar.option-two" class="bar__sidebar-link"}}Here is the second option{{/link-to}}<br>
-              &lt;a href="https://emberjs.com/" class="bar__sidebar-link">EmberJS&lt;/a><br>
-              &lt;a href="https://www.google.com/" class="bar__sidebar-link">Google&lt;/a><br>
-              &lt;a href="http://www.bing.com/" class="bar__sidebar-link">Bing&lt;/a><br>
-              {{#link-to "index" class="bar__sidebar-link"}}Back to Home{{/link-to}}<br>
-            &lt;/div><br>
-            &lt;div class="bar__content"><br>
-              {{outlet}}<br>
-            &lt;/div><br>
-          &lt;/div>
-        </div>
+        <div class="command ember"><pre><code class="html">
+&lt;div class="bar"><br>
+  &lt;div class="bar__sidebar"><br>
+    &lt;h2 class="bar__sidebar-title">SideBar&lt;/h2><br>
+    &lt;div class="bar__sidebar-tag">This will stay for all of the nested routes.&lt;/div><br>
+    {{#link-to "sidebar.index" class="bar__sidebar-link"}}This is the main or index link.{{/link-to}}<br>
+    {{#link-to "sidebar.option-one" class="bar__sidebar-link"}}Here is the first option{{/link-to}}<br>
+    {{#link-to "sidebar.option-two" class="bar__sidebar-link"}}Here is the second option{{/link-to}}<br>
+    &lt;a href="https://emberjs.com/" class="bar__sidebar-link">EmberJS&lt;/a><br>
+    &lt;a href="https://www.google.com/" class="bar__sidebar-link">Google&lt;/a><br>
+    &lt;a href="http://www.bing.com/" class="bar__sidebar-link">Bing&lt;/a><br>
+    {{#link-to "index" class="bar__sidebar-link"}}Back to Home{{/link-to}}<br>
+  &lt;/div><br>
+  &lt;div class="bar__content"><br>
+    {{outlet}}<br>
+  &lt;/div><br>
+&lt;/div>
+            </code></pre></div>
 
         <div class="instructions">Go to app/sidebar/index/template.hbs</div>
-        <div class="command ember">
-          &lt;div class="center"><br>
-            &lt;h1 class="center__tag">This is the Sidebar Index Page&lt;/h1><br>
-          &lt;/div><br>
-        </div>
+        <div class="command ember"><pre><code class="html">
+&lt;div class="center">
+  &lt;h1 class="center__tag">This is the Sidebar Index Page&lt;/h1>
+&lt;/div>
+            </code></pre></div>
         <div class="instructions">Now you can do the same for both of the other option pages. Just change the page names</div>
 
         <h3 class="step">2. Add our styles.</h3>
@@ -308,27 +308,31 @@
         <div class="instructions">Link that new file to the app.scss</div>
         <div class="command ember">@import 'sidebar';</div>
         <div class="instructions">Go back to the app/styles/sidebar.scss and add</div>
-        <div class="command ember">
-          .bar {<br>
-            display: flex;<br>
-            &__sidebar {<br>
-              width: 25%;<br>
-              padding: 0.5rem;<br>
-              border-right: 1px solid black;<br>
-              text-align: center;<br>
-              &-tag {<br>
-                margin-bottom: 1rem;<br>
-              }<br>
-              &-link {<br>
-                display: block;<br>
-                margin: 0.5rem;<br>
-              }<br>
-            }<br>
-            &__content {<br>
-              width: 75%;<br>
-            }<br>
-          }
-        </div>
+        <div class="command ember"><pre><code class="scss">
+.bar {
+  display: flex;
+
+  &__sidebar {
+    width: 25%;
+    padding: 0.5rem;
+    border-right: 1px solid black;
+    text-align: center;
+
+    &-tag {
+      margin-bottom: 1rem;
+    }
+
+    &-link {
+      display: block;
+      margin: 0.5rem;
+    }
+  }
+
+  &__content {
+    width: 75%;
+  }
+}
+            </code></pre></div>
         <h2 class="section ember">That should work. If you have any problems first resart your server</h2>
         <div class="command ember">$ npm start</div>
         <h2 class="section ember">Still having problems? Check out the sample on Github <a href="https://github.com/derrickbray/ember-demo" class="ember">HERE</a></h2>
