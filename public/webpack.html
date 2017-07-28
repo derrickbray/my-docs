@@ -75,19 +75,32 @@
 
     <h3 class="step">6. Setup your webpack.config file.</h3>
     <div class="instructions">Go to your <strong>webpack.config.js</strong> file and add</div>
-    <div class="command webpack">
-      var path = require('path');<br> module.exports = {<br> entry: './src/index.js',<br> output: {<br> filename: 'main.js',<br> }
-      <br> };
-    </div>
+    <div class="command webpack"><pre><code class="js">
+var path = require('path');
+module.exports = {
+    entry: './src/index.js',
+    output: {
+        filename: 'main.js',
+    }
+  };
+        </code></pre></div>
 
     <h3 class="step">7. Let's write some npm scripts.</h3>
     <div class="instructions">Go to your <strong>package.json</strong> so we can add a script.</div>
     <div class="instructions">You should see this:</div>
-    <div class="command webpack"> "scripts": {<br> "test": "echo \"Error: no test specified\" && exit 1"<br> },
-    </div>
+    <div class="command webpack"><pre><code class="json">
+"scripts": {
+  "test": "echo "Error: no test specified" && exit 1"
+},
+        </code></pre></div>
     <div class="instructions">Change it to look like this:</div>
-    <div class="command webpack"> "scripts": {<br> "test": "echo \"Error: no test specified\" && exit 1",<br> "build": "node_modules/.bin/webpack src/index.js main.js",<br> "start": "webpack --watch"<br> },
-    </div>
+    <div class="command webpack"><pre><code class="json">
+"scripts": {
+  "test": "echo "Error: no test specified" && exit 1",
+  "build": "node_modules/.bin/webpack src/index.js main.js",
+  "start": "webpack --watch"
+ },
+        </code></pre></div>
 
     <h3 class="step">8. Moment of truth. Test it out.</h3>
     <div class="instructions">In your terminal type</div>
@@ -126,21 +139,32 @@
     <div class="instructions">Webpack bundles everything into a js file so we need to add a loader to our project to use css.</div>
     <div class="instructions red">Make a new css file in the scr folder named <strong>style.css</strong></div>
     <div class="instructions">Within that file go ahead and make a body style to see if it works.</div>
-    <div class="command webpack">body {<br>
-      background: blue;<br>
-      }</div>
+    <div class="command webpack"><pre><code class="css">
+body {
+  background: blue;
+}</code></pre></div>
     <div class="instructions">Get <a href="https://www.npmjs.com/package/style-loader" class="webpack">style-loader</a></div>
     <div class="command webpack">$ npm install style-loader --save-dev</div>
     <div class="instructions">Then get <a href="https://www.npmjs.com/package/css-loader" class="webpack">css-loader</a></div>
     <div class="command webpack">$ npm install --save-dev css-loader</div>
     <div class="instructions">In the <strong>webpack.config.js</strong> file make it look like this:</div>
-    <div class="command webpack">var path = require('path');<br> module.exports = {<br> entry: './src/index.js',<br> output: {<br> filename: 'main.js'<br> },
-      <br> module: {<br> rules: [<br> {
-      <br> test: /\.css$/,<br> use: ['style-loader', 'css-loader']<br> }
-      <br> ]
-      <br> }
-      <br> }
-      <br></div>
+    <div class="command webpack"><pre><code class="js">
+var path = require('path');
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    filename: 'main.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
+  }
+}
+          </code></pre></div>
     <h3 class="step">2. Now we need to import the styles into our index.js</h3>
     <div class="instructions">Put this at the top of your <strong>index.js</strong> file</div>
     <div class="command webpack">import style from './style.css';</div>
