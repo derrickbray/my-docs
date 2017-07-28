@@ -41,26 +41,26 @@
       <h3 class="step">3. Let's change the file structure that Ember uses.</h3>
       <div class="instructions">Go to the .ember-cli file. It should look like this now</div>
       <div class="command ember"><pre class="json"><code>
-        {
-          /**
-          Ember CLI sends analytics information by default. The data is completely
-          anonymous, but there are times when you might want to disable this behavior.
-          Setting `disableAnalytics` to true will prevent any data from being sent.
-          */
-          "disableAnalytics": false
-        }
+{
+  /**
+  Ember CLI sends analytics information by default. The data is completely
+  anonymous, but there are times when you might want to disable this behavior.
+  Setting `disableAnalytics` to true will prevent any data from being sent.
+  */
+  "disableAnalytics": false
+}
           </code></pre></div>
       <div class="instructions">We need to make it look like this</div>
       <div class="command ember"><pre><code class="json">
-      {
-        /**
-        Ember CLI sends analytics information by default. The data is completely
-        anonymous, but there are times when you might want to disable this behavior.
-        Setting `disableAnalytics` to true will prevent any data from being sent.
-        */
-        "disableAnalytics": false,
-        "usePods": true
-      }
+{
+  /**
+  Ember CLI sends analytics information by default. The data is completely
+  anonymous, but there are times when you might want to disable this behavior.
+  Setting `disableAnalytics` to true will prevent any data from being sent.
+  */
+  "disableAnalytics": false,
+  "usePods": true
+}
           </code></pre></div>
       <h3 class="step">4. Let's use <a href="http://sass-lang.com/" class="ember">SCSS</a> instead of CSS.</h3>
       <div class="instructions">Go to the command line.</div>
@@ -83,34 +83,42 @@
       <h3 class="step">1. Let's add some default styles</h3>
       <div class="instructions">Create a new file in app/styles folder named _box-sizing.scss</div>
       <div class="instructions">Then add this:</div>
-      <div class="command ember">* {<br>
-                              box-sizing: border-box;<br>
-                            }<br>
-                            html {<br>
-                              margin: 0;<br>
-                            }<br>
-                            body {<br>
-                              margin: 0;<br>
-                            }<br>
-                            ul {<br>
-                              padding: 0;<br>
-                              list-style: none;<br>
-                            }<br>
-                            a {<br>
-                              text-decoration: none;<br>
-                              &:hover {<br>
-                                text-decoration: underline;<br>
-                              }<br>
-                            }<br>
-                            .container {<br>
-                              max-width: 65rem;<br>
-                              margin: 0 auto;<br>
-                            }<br>
-                            img {<br>
-                              max-width: 100%;<br>
-                              max-height: 100%;<br>
-                            }
-      </div>
+      <div class="command ember"><pre><code class="scss">
+* {
+    box-sizing: border-box;
+  }
+
+  html {
+    margin: 0;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .container {
+    max-width: 65rem;
+    margin: 0 auto;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+          </code></pre></div>
       <div class="instructions">This file should be universal styles.</div>
       <div class="instructions">Now we need to link this to the app.scss file. Add this to the top.</div>
       <div class="command ember">@import 'box-sizing';</div>
